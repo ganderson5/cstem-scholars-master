@@ -1,0 +1,36 @@
+.app-status {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    margin-left: 8px;
+}
+
+.app-status.draft {
+    background: #eff0f1;
+    color: #454a4d;
+}
+
+.app-status.submitted {
+    background: #dbd5e9;
+    color: #3d2375;
+}
+
+.app-status.pending_review {
+    background: #fff7bf;
+    color: #594d00;
+}
+
+.app-status.reviewed {
+    background: #d2e2f1;
+    color: #144e81;
+}
+
+.app-status.rejected {
+    background: #f6d7d2;
+    color: #942514;
+}
+
+.app-status.awarded {
+    background: #cce2d8;
+    color: #005a30;
+}

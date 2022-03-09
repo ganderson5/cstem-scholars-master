@@ -1,0 +1,21 @@
+# by default the dockerfiles only use mass copying from src.
+# anything from root directory is cherry picked so it's safe to stash stuff there
+# **/dir/** will not copy anything over from the directory that pattern matches? but you still get the folder
+
+# jetbrains is the fucking best, but we don't need our project files here, nor vscode's
+**/.idea/**
+**/.vscode/**
+
+# don't copy tests. only run in dev anyways
+tests/**
+
+# ignore anything related to composer - it's run by the dockerfile
+src/vendor/*
+src/vendor/**
+src/composer.lock
+
+# ignore our base dev config files
+src/config.php
+src/config.sample.php
+
+src/public/dev

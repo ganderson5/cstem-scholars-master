@@ -1,0 +1,11 @@
+.idea/
+src/.idea
+src/.vscode/
+src/config.php
+src/vendor/
+src/composer.lock
+docker notes.txt
+ssh info.txt
+.phpunit.result.cache
+src/phpCAS.log
+src/public/phpCAS.log

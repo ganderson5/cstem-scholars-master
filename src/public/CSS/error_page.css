@@ -1,0 +1,152 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/ewu2.jpg');
+    min-height: 400px;
+}
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+    cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1 {
+        background-attachment: scroll;
+        min-height: 250px;
+    }
+}
+
+.facts li {
+    display: inline;
+    margin: 6px;
+}
+
+.links li {
+    display: inline;
+    margin: 20px;
+}
+
+.contacts li {
+    display: inline;
+}
+
+.facts li a:hover {
+    text-decoration: underline;
+}
+
+.row-links {
+    padding: 10px;
+}
+
+.row-links .logos {
+    margin-left: 100px;
+    float: left;
+}
+
+.row-links ul.left {
+    margin-left: 400px;
+    margin-top: 5px;
+    padding: 0px;
+    width: 150px;
+}
+
+.row-links ul.middle {
+    margin-left: 600px;
+    margin-top: -93px;
+    padding: 0px;
+    width: 150px;
+}
+
+.row-links ul.right {
+    margin-left: 800px;
+    margin-top: -93px;
+    padding: 0px;
+    width: 150px;
+}
+
+.row-links ul.farright {
+    margin-left: 1000px;
+    margin-top: -93px;
+    padding: 0px;
+    width: 150px;
+}
+
+ul.contacts li.a:hover, li.b:hover {
+    text-decoration: underline;
+}
+
+.row-links ul.left li.a:hover, li.b:hover, li.c:hover {
+    text-decoration: underline;
+}
+
+.row-links ul.right li.a:hover, li.b:hover, li.c:hover {
+    text-decoration: underline;
+}
+
+.row-links ul.middle li.a:hover, li.b:hover, li.c:hover {
+    text-decoration: underline;
+}
+
+.row-links ul.farright li.a:hover, li.b:hover, li.c:hover {
+    text-decoration: underline;
+}
+
+ul.facts li.priv:hover, li.access:hover, li.rules:hover {
+    text-decoration: underline;
+}
+
+.fa.fa-facebook:hover {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.fa.fa-twitter:hover {
+    background-color: #4099ff;
+    border-color: #4099ff;
+}
+
+.fa.fa-youtube-play:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.fa.fa-instagram:hover {
+    background-color: #e4405f;
+    border-color: #e4405f;
+}
+
+.fa.fa-linkedin:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.social-media i.fa {
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    margin: 6px;
+    padding: 5px;
+}

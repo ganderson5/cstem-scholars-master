@@ -1,0 +1,4 @@
+FROM mariadb:10.4.13
+COPY setup.sql /docker-entrypoint-initdb.d/
+COPY docker/caseinsensitive.cnf /etc/mysql/conf.d/
+EXPOSE 3306/tcp
