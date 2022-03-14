@@ -2,13 +2,12 @@
 
 $is_login = true;
 require_once __DIR__ . "/../init.php";
-require_once __DIR__ . "/../vendor/apereo/phpcas/CAS.php";
 
 // Production code block. uses CAS
 phpCAS::client(CAS_VERSION, CAS_HOSTNAME, CAS_PORT, CAS_URI);
 
 if (DEBUG) {
-    phpCAS::setDebug();
+    phpCAS::setLogger();
     phpCAS::setVerbose(true);
 }
 

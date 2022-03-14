@@ -55,5 +55,14 @@ COPY docker/config.php /var/www/html/
 # gets to run after our libraries are downloaded and isntalled
 COPY docker/php.ini /usr/local/etc/php/
 
+ARG ENV=production
+
+RUN if [ "$ENV" = "development" ]; then \
+        a2ensite default-ssl \
+        && openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/C=AT/ST=Vienna/L=Vienna/O=Security/OU=Development/CN=example.com" \
+        && a2enmod ssl \
+        && pecl install xdebug && docker-php-ext-enable xdebug; \
+    fi
+
 EXPOSE 80/tcp
 EXPOSE 443/tcp

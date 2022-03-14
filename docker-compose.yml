@@ -9,8 +9,8 @@ services:
     build:
       context: ./
     ports:
-      - "81:81"
-      - "444:444"
+      - "80:80"
+      # - "443:443"
     networks:
       - bridge
 
@@ -29,7 +29,7 @@ services:
     volumes:
       - dbData:/var/lib/mysql
     ports:
-      - "3308:3308"
+      - "3307:3307"
     networks:
       - bridge
 
