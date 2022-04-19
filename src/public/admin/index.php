@@ -18,3 +18,4 @@ $applications['unassigned'] = Application::query(
 )->fetchAll();
 
 echo HTML::template('admin/index.php', $applications);
+echo ($periodID);

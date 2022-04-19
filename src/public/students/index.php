@@ -5,13 +5,18 @@ require_once '../../init.php';
 User::authorize('student');
 
 $user = User::current();
+$username = $user->name;
 $period = Period::current();
+// $period = new Period();
+// $periodStart = $period->beginDate;
+$dump = (String)date('Y-m-d');
 
 if (!$period) {
     User::logout();
 
     HTTP::error(
-        'The CSTEM Research Grant application has been closed. Please check back at a later date.',
+
+        'The CSTEM Research Grantttttt application has been closed.' . $periodStart . 'Please check back at a later date.',
         200,
         'Student Application'
     );
