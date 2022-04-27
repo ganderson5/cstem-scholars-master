@@ -123,7 +123,7 @@ if (HTTP::get('login') !== null) {
     </style>
 </head>
 <body>
-<h1>Developer Login</h1>
+<h1>User Login</h1>
 <form method="POST">
     <label>Name <input type="text" name="name" value="<?= HTTP::cookie('cas_name') ?>" required></label>
     <label>Email <input type="email" name="email" value="<?= HTTP::cookie('cas_email') ?>" required></label>

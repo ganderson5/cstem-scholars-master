@@ -70,7 +70,6 @@
     <?= $form->csrf() ?>
 
     <div class="form">
-        <span><a href="http://www.ewu.edu" target="_blank"><img class="img-link" title="Header Image" alt="Header Image" src="https://cdn.ewu.edu/wp-content/uploads/2021/02/H_RGB_EWUlogo.png" border="0"></a></span>
         <h1>Grant Fund Application<span>Undergraduate Research</span><span>*All Fields Required</span></h1>
         <?php
         if (HTTP::isPost() && !$application->isValid()) { ?>

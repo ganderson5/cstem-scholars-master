@@ -5,23 +5,17 @@ $layout = 'admin/_layout.php';
 $application = $review->application();
 ?>
 
-<div>
-<div style='width: 60%; float:left; margin-right: 25px;'>
+<h1><?= e($application->title) ?></h1>
+<?= template('application_details.php', $application) ?>
 
-    <h1><?= e($application->title) ?></h1>
-    <?= template('application_details.php', $application) ?>
-</div>
 <br>
-
-
-<div style='width: 30%; float:left;'> 
-<h1> REVIEW FORM </h1>
+<h2> REVIEW FORM </h2>
 
 <?= $form->errors() ?>
 
 <form method="POST" enctype="multipart/form-data">
     <?= $form->csrf() ?>
-    <div>
+    <div class="form">
         <p>Does the project demonstrate experiential learning in a CSTEM discipline?</p>
         <p>
             <label><?= $form->radio('q1', 0) ?> 0</label>
@@ -94,6 +88,3 @@ $application = $review->application();
         </div>
     </div>
 </form>
-</div>
-
-</div>

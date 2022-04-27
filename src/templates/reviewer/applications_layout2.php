@@ -6,8 +6,6 @@ $title = 'Applications';
 $layout = 'admin/_layout.php';
 ?>
 
-<div class = 'ss' style='width: 50%; float:inherit;'>
-
 <h1>Applications</h1>
 
 <table>
@@ -31,5 +29,3 @@ $layout = 'admin/_layout.php';
     <?php
     } ?>
 </table>
-
-</div>
