@@ -14,7 +14,7 @@ $application = $review->application();
 <br>
 
 
-<div style='width: 30%; float:left;'> 
+<div style='width: 30%; float:left; padding-bottom: 25px;'> 
 <h1> REVIEW FORM </h1>
 
 <?= $form->errors() ?>
