@@ -6,7 +6,7 @@ $application = $review->application();
 ?>
 
 
-    <div style='width: 65%; float:left; margin-right: 25px; margin-top: 25px;'>
+    <div style='width: 65%; float:left; margin-right: 15px; margin-top: 25px;'>
 
         <h1><?= e($application->title) ?></h1>
         <?= template('application_details.php', $application) ?>
@@ -14,7 +14,7 @@ $application = $review->application();
     <br>
 
 
-    <div style='width: 30%; float:left; padding-bottom: 25px;'> 
+    <div class="vl" style='width: 30%; float:left; padding-bottom: 25px;'> 
     <h1> Review Form </h1>
 
     <?= $form->errors() ?>
@@ -95,3 +95,11 @@ $application = $review->application();
         </div>
     </form>
     </div>
+
+<style>
+    .vl {
+    border-left: 1px solid black;
+    padding: 10px;
+    left: 50%;
+    }
+</style>
