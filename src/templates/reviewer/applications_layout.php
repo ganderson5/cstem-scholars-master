@@ -6,7 +6,7 @@ $title = 'Applications';
 $layout = 'admin/_layout.php';
 ?>
 
-<div class = 'ss' style='width: 50%; float:inherit;'>
+<div>
 
 <h1>Applications</h1>
 

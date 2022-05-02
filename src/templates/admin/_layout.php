@@ -14,7 +14,7 @@ $user = User::current();
     <script src="../admin.js"></script>
 </head>
 <body>
-
+<div style='float:left; margin-left: 30px;'>
 <button id="menu-button" title="Menu"><i class="icon menu-light"></i> Menu</button>
 
 <nav class="sidebar" id="menu">
@@ -62,5 +62,6 @@ $user = User::current();
 <main class="content">
     <?= $content ?>
 </main>
+</div>
 </body>
 </html>
