@@ -86,7 +86,7 @@ $application = $review->application();
 
             <div class="form-group">
                 <label for="comments">Quality Assessment Comments:</label><br>
-                <?= $form->textarea('comments', ['maxlength' => 2000, 'rows' => 8, 'cols' => 80]) ?>
+                <?= $form->textarea('comments', ['maxlength' => 2000, 'rows' => 8, 'cols' => 65]) ?>
             </div>
 
             <div class="button-section">
