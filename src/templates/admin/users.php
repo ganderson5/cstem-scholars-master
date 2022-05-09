@@ -12,7 +12,7 @@ $layout = 'admin/_layout.php';
     <tr>
         <th>Name</th>
         <th>Email</th>
-        <th>Roles</th>
+        <th>Role</th>
         <th></th>
     </tr>
 
