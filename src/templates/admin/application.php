@@ -70,6 +70,7 @@ $layout = 'admin/_layout.php';
 <h2>Reviews</h2>
 
 <?php
+$totalPoints;
 foreach ($application->reviews() as $review) { ?>
     <?php
     $reviewer = $review->reviewer() ?>
@@ -87,12 +88,13 @@ foreach ($application->reviews() as $review) { ?>
             ?>
 
             <?php
+            $totalPoints = 0;
             foreach (Review::QUESTIONS as $i => $q) { ?>
                 <p><?= $q ?></p>
                 <blockquote><?= e($review->{'q' . ($i + 1)}) ?> / 3</blockquote>
+                <?php $totalPoints += $review->{'q' . ($i + 1)};?>
                 <?php
             } ?>
-
             <p>Comments:</p>
             <blockquote>
                 <pre><?= $review->comments ? e($review->comments) : 'No comment' ?></pre>
@@ -103,8 +105,11 @@ foreach ($application->reviews() as $review) { ?>
 
             <?php
         } ?>
-
+    <p>Total Score:</p>
+    <blockquote><?= $totalPoints ?></blockquote>
     </section>
+
+
 
     <?php
 } ?>

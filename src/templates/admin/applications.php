@@ -1,5 +1,4 @@
 <?php
-
 $title = 'Applications';
 $layout = 'admin/_layout.php';
 $sum = array_reduce($applications, fn($sum, $a) => $sum + $a->amountAwarded);
@@ -42,22 +41,26 @@ helper('money');
         <th>Student Name</th>
         <th>Title</th>
         <th>Status</th>
+        <th>Score</th>
         <th>Award</th>
     </tr>
 
     <?php
     foreach ($applications as $a) { ?>
+    
         <tr>
             <td><?= e($a->name) ?></td>
             <td><?= HTML::link("../admin/applications.php?id={$a->id}", e($a->title)) ?></td>
             <td><?= applicationStatus($a) ?></td>
+            <td>0</td>
             <td><?= $a->amountAwarded ? usd($a->amountAwarded) : '<span class="na">N/A</span>' ?></td>
         </tr>
     <?php
     } ?>
 
     <tr>
-        <td colspan="3"></td>
+        <td colspan="4"></td>
         <td><strong><?= $sum ? usd($sum) : '' ?></strong></td>
     </tr>
 </table>
+    
