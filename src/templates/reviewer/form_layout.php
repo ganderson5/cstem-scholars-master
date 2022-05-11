@@ -14,7 +14,7 @@ $application = $review->application();
     <br>
 
 
-    <div class="vl" style='width: 30%; float:left; padding-bottom: 25px;'> 
+    <div class="vl" style='width: 30%; background-color: #f8f8ff; float:left; padding-bottom: 25px;'> 
     <h1> Review Form </h1>
 
     <?= $form->errors() ?>
@@ -86,7 +86,7 @@ $application = $review->application();
 
             <div class="form-group">
                 <label for="comments">Quality Assessment Comments:</label><br>
-                <?= $form->textarea('comments', ['maxlength' => 2000, 'rows' => 8, 'cols' => 65]) ?>
+                <?= $form->textarea('comments', ['maxlength' => 2000, 'rows' => 8, 'cols' => 32]) ?>
             </div>
 
             <div class="button-section">
