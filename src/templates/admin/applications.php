@@ -48,10 +48,9 @@ helper('money');
     <?php
     foreach ($applications as $a) {
 
-        $totalPoints;
+        $totalPoints= 0;
         foreach ($a->reviews() as $review) { 
         $reviewer = $review->reviewer();
-                $totalPoints = 0;
                 foreach (Review::QUESTIONS as $i => $q) {
                     $totalPoints += $review->{'q' . ($i + 1)};
                 } 
