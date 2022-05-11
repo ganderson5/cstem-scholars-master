@@ -49,19 +49,25 @@ helper('money');
     foreach ($applications as $a) {
 
         $totalPoints= 0;
+        $totalReviews=0;
         foreach ($a->reviews() as $review) { 
-        $reviewer = $review->reviewer();
-                foreach (Review::QUESTIONS as $i => $q) {
-                    $totalPoints += $review->{'q' . ($i + 1)};
-                } 
-        } 
-        // $application->totalScore = $totalPoints;
+            $reviewer = $review->reviewer();
+            $totalReviews++;
+            foreach (Review::QUESTIONS as $i => $q) {
+                $totalPoints += $review->{'q' . ($i + 1)};
+            } 
+        }
+        if($totalReviews>0){ 
+            $scorePercentage = (int)($totalPoints / ($totalReviews * 18) * 100);
+        } else {
+            $scorePercentage = 0;
+        }
     ?>
         <tr>
             <td><?= e($a->name) ?></td>
             <td><?= HTML::link("../admin/applications.php?id={$a->id}", e($a->title)) ?></td>
             <td><?= applicationStatus($a) ?></td>
-            <td><?= $totalPoints ?></td>
+            <td><?= $scorePercentage ?>%</td>
             <td><?= $a->amountAwarded ? usd($a->amountAwarded) : '<span class="na">N/A</span>' ?></td>
         </tr>
     <?php
