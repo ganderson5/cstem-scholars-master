@@ -46,13 +46,23 @@ helper('money');
     </tr>
 
     <?php
-    foreach ($applications as $a) { ?>
-    
+    foreach ($applications as $a) {
+
+        $totalPoints;
+        foreach ($a->reviews() as $review) { 
+        $reviewer = $review->reviewer();
+                $totalPoints = 0;
+                foreach (Review::QUESTIONS as $i => $q) {
+                    $totalPoints += $review->{'q' . ($i + 1)};
+                } 
+        } 
+        // $application->totalScore = $totalPoints;
+    ?>
         <tr>
             <td><?= e($a->name) ?></td>
             <td><?= HTML::link("../admin/applications.php?id={$a->id}", e($a->title)) ?></td>
             <td><?= applicationStatus($a) ?></td>
-            <td>0</td>
+            <td><?= $totalPoints ?></td>
             <td><?= $a->amountAwarded ? usd($a->amountAwarded) : '<span class="na">N/A</span>' ?></td>
         </tr>
     <?php

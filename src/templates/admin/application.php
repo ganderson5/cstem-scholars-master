@@ -106,6 +106,7 @@ foreach ($application->reviews() as $review) { ?>
             <?php
         } ?>
     <p>Total Score:</p>
+    <?php $application->totalScore = $totalPoints; ?>
     <blockquote><?= $totalPoints ?></blockquote>
     </section>
 
