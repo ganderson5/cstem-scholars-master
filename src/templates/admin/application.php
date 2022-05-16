@@ -73,11 +73,20 @@ $layout = 'admin/_layout.php';
 $totalPoints;
 foreach ($application->reviews() as $review) { ?>
     <?php
+    $totalPoints= 0;
+    foreach (Review::QUESTIONS as $i => $q) {
+        $totalPoints += $review->{'q' . ($i + 1)};
+    } 
+
     $reviewer = $review->reviewer() ?>
 
     <p>
         <strong><?= e($reviewer->name) ?></strong>
         <<?= HTML::link('mailto:' . urlencode($reviewer->email), e($reviewer->email)) ?>>:
+        <b>Total Score:</b>
+        <?= $totalPoints ?>
+
+
     </p>
     <section class="review">
 
@@ -105,10 +114,10 @@ foreach ($application->reviews() as $review) { ?>
 
             <?php
         } ?>
-    <p>Total Score:</p>
+    <!-- <p>Total Score:</p>
     <?php $application->totalScore = $totalPoints; ?>
     <blockquote><?= $totalPoints ?></blockquote>
-    </section>
+    </section> -->
 
 
 
