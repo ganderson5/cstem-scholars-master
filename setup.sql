@@ -30,7 +30,7 @@ create table `Application`
     `name`            varchar(50)    null,
     `email`           varchar(50)    null,
     `title`           varchar(140)   null,
-    `major`           varchar(30)    null,
+    `major`           varchar(60)    null,
     `gpa`             double         null,
     `graduationDate`  date           null,
     `advisorName`     varchar(50)    null,
