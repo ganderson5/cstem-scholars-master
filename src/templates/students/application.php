@@ -121,13 +121,19 @@
 
             <label>
                 GPA:
-                <?= $form->number('gpa', ['min' => 1, 'max' => 4, 'step' => 0.1, 'required']) ?>
+                <?= $form->number('gpa', ['min' => 1, 'max' => 4, 'step' => 0.01, 'required']) ?>
             </label>
 
+            <!-- remove div class  -->
+            <div class = "calander-size">
             <label>
                 Expected Graduation Date:
+                
                 <?= $form->date('graduationDate', ['required']) ?>
             </label>
+            </div>
+
+
         </div>
 
         <div class="section"><span>3</span>Advisor Information</div>
@@ -256,6 +262,8 @@
         </div>
     </div>
 </form>
-
+<style>
+    
+</style>
 </body>
 </html>
