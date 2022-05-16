@@ -7,7 +7,7 @@ class Application extends Model
     public const DEPARTMENTS = [
         'Biology',
         'Chemistry & Biochemistry & Physics',
-        'Computer Science & Electrical Enginering',
+        'Computer Science & Electrical Engineering',
         'Design',
         'Mechanical Engineering & Thechnology ',
         'Enviromental Science',
