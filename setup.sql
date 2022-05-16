@@ -43,7 +43,6 @@ create table `Application`
     `fundingSources`  text           null,
     `budgetTable`     text           null,
     `status`          varchar(30)    not null,
-    `totalScore`       int            not null,
     `amountAwarded`   decimal(10, 2) null,
     foreign key (advisorEmail) references User (email)
         on update cascade
