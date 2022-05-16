@@ -16,7 +16,7 @@ if (!$period) {
 
     HTTP::error(
 
-        'The CSTEM Research Grantttttt application has been closed.' . $periodStart . 'Please check back at a later date.',
+        'The CSTEM Research Grant application has been closed.' . $periodStart . 'Please check back at a later date.',
         200,
         'Student Application'
     );

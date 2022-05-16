@@ -5,16 +5,14 @@ use Respect\Validation\ValidatorFunction as v;
 class Application extends Model
 {
     public const DEPARTMENTS = [
-        'Biology',
-        'Chemistry',
-        'Computer Science',
-        'Design',
-        'Engineering',
-        'Environmental Science',
-        'Geology',
-        'Mathematics',
-        'Natural Science',
-        'Physics'
+        'BIOL',
+        'CHEM/BIOCHEM/PHYS',
+        'CSCD/EE',
+        'DESG',
+        'ME&TECH',
+        'ENVS',
+        'GEOS',
+        'MATH'
     ];
 
     public const VALID_STATES = [
