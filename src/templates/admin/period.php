@@ -30,4 +30,11 @@ $layout = 'admin/_layout.php';
     </div>
 
     <button type="submit">Submit</button>
+
+    <style>
+        .form-group {
+            margin-bottom: 1em;
+            max-width: 100%;
+        }
+    </style>
 </form>

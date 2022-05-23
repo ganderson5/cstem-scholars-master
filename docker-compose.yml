@@ -33,6 +33,16 @@ services:
     networks:
       - bridge
 
+  mailer_service:
+    build:
+      context: .
+      dockerfile: mailer_service.Dockerfile
+
+    working_dir: /mailer_service
+
+    volumes:
+      - ./:/mailer_service
+
 networks:
   bridge:
     name: cstem-scholars-network
