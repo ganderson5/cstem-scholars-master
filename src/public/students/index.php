@@ -70,6 +70,13 @@ if (HTTP::isPost() && $application->isValid()) {
                 )
             );
 
+            // Add email to advisor using send.php
+            $toAdvisor = $application->advisorEmail;
+            $subjectAdvisor = "College of STEM Reseach Application Confirmation";
+            $messageAdvisor = "You have a new student submission from " . $application->name . ".";
+            mail($to,$subject,$message);
+
+
             // Email the student
             Mail::send(
                 $application->email,
@@ -79,6 +86,10 @@ if (HTTP::isPost() && $application->isValid()) {
                     ['application' => $application, 'period' => $period]
                 )
             );
+            $toStudent = $application->email;
+            $subjectStudent = "College of STEM Reseach Application Confirmation";
+            $messageStudent = "Your application has been submitted.";
+            mail($to,$subject,$message);
         }
 
         DB::commit();

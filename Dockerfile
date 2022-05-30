@@ -64,5 +64,7 @@ RUN if [ "$ENV" = "development" ]; then \
         && pecl install xdebug && docker-php-ext-enable xdebug; \
     fi
 
+# for mail service 
+
 EXPOSE 80/tcp
 EXPOSE 443/tcp

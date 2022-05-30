@@ -33,19 +33,27 @@ services:
     networks:
       - bridge
 
-  mailer_service:
+  mailer:
+    image: ilyasotkov/php-msmtp:7-fpm-alpine
+    container_name: mailer
     build:
-      context: .
-      dockerfile: mailer_service.Dockerfile
-
-    working_dir: /mailer_service
-
+      context: ./
+      dockerfile: Dockerfile-mailer
+    secrets:
+      - gmail_password
     volumes:
-      - ./:/mailer_service
+      - ./msmtprc:/etc/msmtprc
+      - ./send.php:/send.php
+    networks:
+      - bridge
 
 networks:
   bridge:
     name: cstem-scholars-network
+
+secrets:
+  gmail_password:
+    file: ./gmail_password
 
 volumes:
   dbData: {}
