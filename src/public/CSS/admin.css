@@ -268,7 +268,7 @@ ul.tabs li a.active {
   position: fixed;
   top: 0;
   left: 0;
-  width: 120px;
+  width: 15%;
   overflow-x: hidden;
   overflow-y: auto;
   display: block;

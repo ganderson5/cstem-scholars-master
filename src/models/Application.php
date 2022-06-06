@@ -9,7 +9,7 @@ class Application extends Model
         'Chemistry and Biochemistry and Physics',
         'Computer Science and Electrical Engineering',
         'Design',
-        'Mechanical Engineering and Thechnology',
+        'Mechanical Engineering and Technology',
         'Enviromental Science',
         'Geosciences',
         'Mathematics'

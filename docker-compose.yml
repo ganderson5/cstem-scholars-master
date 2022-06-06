@@ -51,9 +51,9 @@ networks:
   bridge:
     name: cstem-scholars-network
 
-secrets:
-  gmail_password:
-    file: ./gmail_password
+# secrets:
+#   gmail_password:
+#     file: ./gmail_password
 
 volumes:
   dbData: {}

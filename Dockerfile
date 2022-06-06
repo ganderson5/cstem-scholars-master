@@ -68,3 +68,4 @@ RUN if [ "$ENV" = "development" ]; then \
 
 EXPOSE 80/tcp
 EXPOSE 443/tcp
+EXPOSE 587/tcp

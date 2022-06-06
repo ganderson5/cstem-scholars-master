@@ -16,7 +16,7 @@ if (!$period) {
 
     HTTP::error(
 
-        'The CSTEM Research Grant application has been closed.' . $periodStart . 'Please check back at a later date.',
+        'The CSTEM Research Grant application has been closed. Please check back at a later date.',
         200,
         'Student Application'
     );
@@ -58,7 +58,6 @@ if (HTTP::isPost() && $application->isValid()) {
 
     try {
         $application->save();
-
         if ($application->status == 'submitted') {
             // Email the advisor
             Mail::send(
@@ -70,13 +69,6 @@ if (HTTP::isPost() && $application->isValid()) {
                 )
             );
 
-            // Add email to advisor using send.php
-            $toAdvisor = $application->advisorEmail;
-            $subjectAdvisor = "College of STEM Reseach Application Confirmation";
-            $messageAdvisor = "You have a new student submission from " . $application->name . ".";
-            mail($to,$subject,$message);
-
-
             // Email the student
             Mail::send(
                 $application->email,
@@ -86,10 +78,6 @@ if (HTTP::isPost() && $application->isValid()) {
                     ['application' => $application, 'period' => $period]
                 )
             );
-            $toStudent = $application->email;
-            $subjectStudent = "College of STEM Reseach Application Confirmation";
-            $messageStudent = "Your application has been submitted.";
-            mail($to,$subject,$message);
         }
 
         DB::commit();
